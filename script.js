@@ -1,22 +1,25 @@
+// Escuchamos el evento 'submit' (cuando se hace clic en Registrar)
 document.getElementById('registroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que la página se recargue
+    
+    // Evitamos que el formulario refresque la página (comportamiento por defecto)
+    event.preventDefault();
 
-    // Capturar los valores
+    // Obtenemos los valores escritos por el usuario usando sus IDs
     const nombre = document.getElementById('nombre').value;
     const correo = document.getElementById('correo').value;
     const telefono = document.getElementById('telefono').value;
     const curso = document.getElementById('curso').value;
 
-    // Aquí puedes hacer lo que necesites con los datos
-    console.log("Datos capturados:", {
-        nombre,
-        correo,
-        telefono,
-        curso
-    });
+    // Validación simple en consola para verificar que los datos llegan
+    console.log("--- Nuevo Registro ---");
+    console.log("Nombre: " + nombre);
+    console.log("Email: " + correo);
+    console.log("Teléfono: " + telefono);
+    console.log("Curso: " + curso);
 
-    alert('¡Registro exitoso para ' + nombre + '!');
-    
-    // Opcional: Limpiar el formulario
-    // this.reset();
+    // Mostramos un mensaje de confirmación al usuario
+    alert(`¡Gracias ${nombre}! Te has registrado correctamente en el curso de ${curso}.`);
+
+    // Opcional: Limpiar los campos después de registrar
+    this.reset();
 });

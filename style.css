@@ -1,6 +1,7 @@
+/* Configuración general para centrar el contenido en pantalla */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7f6; /* Color de fondo gris muy claro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,47 +9,52 @@ body {
     margin: 0;
 }
 
+/* Estilo del título principal */
 h1 {
-    color: #337ab7;
+    color: #337ab7; /* Azul similar al de la imagen */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* Caja blanca que contiene el formulario */
 .container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #eee;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 350px;
+    border: 1px solid #ddd;
 }
 
+/* Espaciado entre cada campo */
 .form-group {
     margin-bottom: 15px;
 }
 
+/* Estilo de las etiquetas (labels) */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    font-size: 14px;
 }
 
+/* Estilo para los inputs y el select */
 input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Para que el padding no afecte el ancho */
-    font-size: 14px;
-    color: #555;
+    box-sizing: border-box; /* Asegura que el padding no agrande el input */
+    outline: none; /* Quita el borde azul por defecto al hacer clic */
 }
 
-input::placeholder {
-    color: #999;
+/* Cambio de borde al hacer clic en un campo */
+input:focus, select:focus {
+    border-color: #337ab7;
 }
 
+/* Estilo del botón azul */
 button {
     width: 100%;
     padding: 12px;
@@ -58,10 +64,11 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    transition: background 0.3s ease; /* Animación suave al pasar el mouse */
 }
 
+/* Efecto al pasar el mouse sobre el botón */
 button:hover {
     background-color: #286090;
 }
